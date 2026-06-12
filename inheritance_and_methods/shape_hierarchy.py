@@ -163,19 +163,3 @@ class Triangle(Shape):
     def area(self):
         s = self.perimeter() / 2
         return (s * (s - self.a) * (s - self.b) * (s - self.c)) ** 0.5
-
-
-try:
-    s = Shape("Generic Shape")
-    s.describe()
-except NotImplementedError as e:
-    print("Shape itself raises NotImplementedError:", e)
-
-shapes = [
-    Circle(5),
-    Rectangle(4, 6),
-    Triangle(3, 4, 5),
-]
-
-for shape in shapes:
-    shape.describe()
