@@ -119,23 +119,3 @@ class Employee:
     @staticmethod
     def is_valid_salary(amount):
         return isinstance(amount, (int, float)) and amount > 0
-
-
-e1 = Employee("Alice", 100000)
-e2 = Employee("Bob",   80000)
-e3 = Employee.from_string("Carol,75000")
-
-e1.apply_raise()
-
-Employee.set_raise_percentage(10)
-
-e2.apply_raise()
-e3.apply_raise()
-
-print(f"{e1.name} -> {e1.salary}")
-print(f"{e2.name} -> {e2.salary}")
-print(f"{e3.name} -> {e3.salary}")
-
-print("is_valid_salary(50000)  ->", Employee.is_valid_salary(50000))
-print("is_valid_salary(-100)   ->", Employee.is_valid_salary(-100))
-print("is_valid_salary('abc')  ->", Employee.is_valid_salary("abc"))
