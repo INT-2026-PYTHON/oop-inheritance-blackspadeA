@@ -83,16 +83,3 @@ class Dog(Animal):
 
     def describe(self):
         print(f"{self.name} is a {self.breed}")
-
-
-a = Animal("Cat", "Meow")
-a.speak()
-
-d1 = Dog("Buddy", "Labrador")
-d2 = Dog("Rex", "Beagle")
-
-d1.speak()
-d1.describe()
-
-d2.speak()
-d2.describe()
